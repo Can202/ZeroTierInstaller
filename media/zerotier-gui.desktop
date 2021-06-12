@@ -4,6 +4,6 @@ Comment=Linux front-end for ZeroTier
 Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY /opt/ZeroTierInstaller/zerotier-exec
 Icon=/opt/ZeroTierInstaller/zerotier-gui.png
 Name=ZeroTier GUI
-Terminal=false
+Terminal=true
 Type=Application
 Version=1.2.2
