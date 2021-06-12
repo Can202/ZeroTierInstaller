@@ -47,7 +47,7 @@ xterm -e "curl -s https://install.zerotier.com | sudo bash"
 echo ZeroTier installed
 
 cd /opt
-mkdir ZeroTierInstaller
+sudo mkdir ZeroTierInstaller
 
 cd /tmp
 
@@ -66,7 +66,7 @@ sudo cp ZeroTier-GUI/src/zerotier-gui /usr/bin/
 
 git clone https://github.com/Can202/ZeroTierInstaller
 cd ZeroTierInstaller/media/
-sudo cp zerotier-gui.png /opt/ZeroTierInstaller
+sudo cp zerotier-gui.png /opt/ZeroTierInstaller/
 
 echo icon... done
 
@@ -74,7 +74,7 @@ sudo cp zerotier-gui.desktop /usr/share/applications/
 
 echo app created
 
-cd /opt
+cd /tmp
 sudo rm -R ZeroTierInstaller/
 echo ZeroTierInstaller Folder Removed
 
