@@ -1,4 +1,7 @@
 # ZeroTierInstaller
+
+A installer to ZeroTier on Linux, with graphic interface (thanks to [tralph3](https://github.com/tralph3/ZeroTier-GUI))
+
 works on Debian-based (apt), Arch-based (pacman), Fedora-like(dnf) and OpenSUSE based (zypper)
 
 
@@ -11,3 +14,6 @@ Tutorial:
 3rd: Run in your terminal
 
 4th: Follow the instructions
+
+
+
