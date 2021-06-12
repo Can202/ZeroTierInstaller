@@ -1,14 +1,8 @@
 #!/bin/sh
 
-if [ $1 = "--version" ]
-then
-    echo "version v0.1"
-    exit
-fi
-
-echo "do you use su command?(y/n)"
+echo "do you use sudo command?(y/n)"
 read sucommand
-if [ $sucommand = y ]
+if [ $sucommand = n ]
 then
     echo "I need your username to add to the sudo group, if you are agree put your password"
     echo
@@ -16,13 +10,13 @@ then
     echo added to the sudo group
     echo
     echo
-    echo "restart the PC, and then say you don't use the su command"
+    echo "restart the PC, and then say you use the sudo command"
     echo
     echo
     read nothing
     exit
 else
-    if [ $sucommand = n ]
+    if [ $sucommand = y ]
     then 
         echo OK
     else
@@ -34,7 +28,7 @@ fi
 echo "this script works on Debian, Ubuntu, Linux Mint, etc. (apt)"
 echo "continue?(y/n)"
 read debbased
-if [ $debbased = n ]
+if [ $debbased = y ]
 then
     echo abort
     exit
