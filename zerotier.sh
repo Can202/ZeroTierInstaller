@@ -25,16 +25,52 @@ else
     fi
 fi
 
-echo "this script works on Debian, Ubuntu, Linux Mint, etc. (apt)"
-echo "continue?(y/n)"
-read debbased
-if [ $debbased = n ]
+echo "Do you use Distros based on Debian, Ubuntu, Linux Mint, etc. (apt), y/n"
+read deb
+if [ $deb = y ]
 then
-    echo abort
-    exit
+    sudo apt install curl git python3 python3-tk xterm
+    echo satisfied dependencies
+else
+    if [ $deb = n ]
+    then
+        echo "Do you use Distros based on Fedora, Red Hat, Mageia, etc. (dnf), y/n"
+        read dnf
+        if [ $dnf = y ]
+        then
+            sudo dnf install curl git python3 python3-tkinter xterm
+            echo satisfied dependencies
+        else
+            echo "Do you use Distros based on Arch, Manjaro, etc (pacman), y/n"
+            read pacman
+            if [ $pacman = y ]
+            then
+                sudo pacman -S curl git python tk xterm
+                echo satisfied dependencies
+            else
+                echo "Do you use Distros based on OpenSUSE (zypper), y/n"
+                read zypper
+                if [ $zypper = y ]
+                then
+                    sudo zypper install curl git xterm python3 python3-tk
+                    echo satisfied dependencies
+                else
+                    echo "do you want to continue without the satisfied dependencies?, y/n"
+                    read nodep
+                    if [ $nodep = n ]
+                    then
+                        echo ABORT
+                        exit
+                    fi
+                fi
+            fi
+        fi
+    else
+        echo ABORT
+        exit
+    fi
 fi
-sudo apt install curl git python3 python3-tk xterm
-echo satisfied dependencies
+
 
 xterm -e "curl -s https://install.zerotier.com | sudo bash"
 
