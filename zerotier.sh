@@ -1,4 +1,11 @@
 #!/bin/sh
+
+if [ $1 = "--version" ]
+then
+    echo "version v0.1"
+    exit
+fi
+
 echo "do you use su command?(y/n)"
 read sucommand
 if [ $sucommand = y ]

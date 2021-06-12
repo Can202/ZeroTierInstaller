@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=Utility;
+Comment=Linux front-end for ZeroTier
+Encoding=UTF-8
+Exec=pkexec sudo zerotier-gui
+GenericName=ZeroTier GUI
+Icon=zerotier-gui
+MimeType=
+Name=ZeroTier GUI
+Path=
+StartupNotify=false
+Terminal=true
+TerminalOptions=
+Type=Application
+Version=1.2.2
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
