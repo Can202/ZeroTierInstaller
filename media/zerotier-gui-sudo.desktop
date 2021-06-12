@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Utility;
+Comment=Linux front-end for ZeroTier
+Exec=sudo /opt/ZeroTierInstaller/zerotier-exec
+Icon=/opt/ZeroTierInstaller/zerotier-gui.png
+Name=ZeroTier GUI (SUDO)
+Terminal=true
+Type=Application
+Version=1.2.2
