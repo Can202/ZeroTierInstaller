@@ -1,5 +1,7 @@
 #!/bin/sh
 
+PACMAN="no"
+
 echo "do you use sudo command?(y/n)"
 read sucommand
 if [ $sucommand = n ]
@@ -45,6 +47,7 @@ else
             read pacman
             if [ $pacman = y ]
             then
+                PACMAN="yes"
                 sudo pacman -Sy curl git python tk xterm zerotier-one
                 echo satisfied dependencies
             else
@@ -71,7 +74,7 @@ else
     fi
 fi
 
-if [ $pacman != y ]
+if [ $PACMAN = no ]
 then
     xterm -e "curl -s https://install.zerotier.com | sudo bash"
 fi
