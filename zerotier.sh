@@ -45,7 +45,7 @@ else
             read pacman
             if [ $pacman = y ]
             then
-                sudo pacman -S curl git python tk xterm
+                sudo pacman -Sy curl git python tk xterm zerotier-one
                 echo satisfied dependencies
             else
                 echo "Do you use Distros based on OpenSUSE (zypper), y/n"
@@ -71,8 +71,10 @@ else
     fi
 fi
 
-
-xterm -e "curl -s https://install.zerotier.com | sudo bash"
+if [ $pacman != y ]
+then
+    xterm -e "curl -s https://install.zerotier.com | sudo bash"
+fi
 
 echo ZeroTier installed
 
