@@ -105,6 +105,7 @@ sudo cp zerotier-exec /opt/ZeroTierInstaller/
 echo icon... done
 
 sudo cp zerotier-gui.desktop /usr/share/applications/
+sudo cp zerotier-gui-sudo.desktop /usr/share/applications/
 
 echo app created
 
