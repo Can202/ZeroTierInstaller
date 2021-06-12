@@ -1,35 +1,19 @@
 #!/bin/sh
-
 echo "do you use su command?(y/n)"
 read sucommand
 if [ $sucommand = y ]
 then
-    echo "I need your username to add to the sudo group"
+    echo "I need your username to add to the sudo group, if you are agree put your password"
     echo
-    echo "IMPORTANT: please put the real username, not Real Name, example: manuel yes, Manuel no"
+    su -c "sudo adduser $USER sudo"
+    echo added to the sudo group
     echo
-    echo "tell me your username:"
-    read username
-    echo "again:"
-    read usernameagain
-
-    if [ $username = $usernameagain ]
-    then
-        echo GOOD
-        su -c "sudo adduser $username sudo"
-        echo added to the sudo group
-        echo
-        echo
-        echo "restart the PC, and then say you don't use the su command"
-        echo
-        echo
-        read nothing
-        exit
-    else
-        echo ERROR: not equal
-        exit
-    fi
-    
+    echo
+    echo "restart the PC, and then say you don't use the su command"
+    echo
+    echo
+    read nothing
+    exit
 else
     if [ $sucommand = n ]
     then 
