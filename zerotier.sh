@@ -46,6 +46,9 @@ xterm -e "curl -s https://install.zerotier.com | sudo bash"
 
 echo ZeroTier installed
 
+cd /opt
+mkdir ZeroTierInstaller
+
 cd /tmp
 
 mkdir ZeroTierInstaller
@@ -61,7 +64,17 @@ echo ZeroTier-GUI by tralph3 cloned
 
 sudo cp ZeroTier-GUI/src/zerotier-gui /usr/bin/
 
-cd ..
+git clone https://github.com/Can202/ZeroTierInstaller
+cd ZeroTierInstaller/media/
+sudo cp zerotier-gui.png /opt/ZeroTierInstaller
+
+echo icon... done
+
+sudo cp zerotier-gui.desktop /usr/share/applications/
+
+echo app created
+
+cd /opt
 sudo rm -R ZeroTierInstaller/
 echo ZeroTierInstaller Folder Removed
 
@@ -76,6 +89,9 @@ echo
 echo sudo zerotier-gui
 echo
 echo
+
+echo and in your apps
+
 echo now you can close this window
 read nothing
 exit
