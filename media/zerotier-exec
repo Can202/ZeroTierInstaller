@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo zerotier-one
+sudo zerotier-gui

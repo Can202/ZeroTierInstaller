@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Utility;
 Comment=Linux front-end for ZeroTier
-Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY zerotier-gui
+Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY zerotier-exec
 Icon=/opt/ZeroTierInstaller/zerotier-gui.png
 Name=ZeroTier GUI
 Terminal=false

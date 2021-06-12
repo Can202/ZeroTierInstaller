@@ -99,6 +99,7 @@ sudo cp ZeroTier-GUI/src/zerotier-gui /usr/bin/
 git clone https://github.com/Can202/ZeroTierInstaller
 cd ZeroTierInstaller/media/
 sudo cp zerotier-gui.png /opt/ZeroTierInstaller/
+sudo cp zerotier-exec /usr/bin
 
 echo icon... done
 
