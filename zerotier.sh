@@ -28,7 +28,7 @@ fi
 echo "this script works on Debian, Ubuntu, Linux Mint, etc. (apt)"
 echo "continue?(y/n)"
 read debbased
-if [ $debbased = y ]
+if [ $debbased = n ]
 then
     echo abort
     exit
