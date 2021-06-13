@@ -36,7 +36,7 @@ then
 else
     if [ $deb = n ]
     then
-        echo "Do you use Distros based on Fedora, Red Hat, Mageia, etc. (dnf), y/n"
+        echo "Do you use Distros based on Fedora, Red Hat, etc. (dnf), y/n"
         read dnf
         if [ $dnf = y ]
         then
