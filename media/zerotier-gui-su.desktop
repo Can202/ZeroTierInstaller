@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Utility;
 Comment=Linux front-end for ZeroTier
-Exec=su -c "/opt/ZeroTierInstaller/zerotier-exec"
+Exec=su -c "zerotier-gui"
 Icon=/opt/ZeroTierInstaller/zerotier-gui.png
 Name=ZeroTier GUI (SU)
 Terminal=true
