@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PACMAN="no"
+NOINSTALLONCURL="no"
 
 echo "do you use sudo command?(y/n)"
 read sucommand
@@ -47,7 +47,7 @@ else
             read pacman
             if [ $pacman = y ]
             then
-                PACMAN="yes"
+                NOINSTALLONCURL="yes"
                 sudo pacman -Sy curl git python tk xterm zerotier-one
                 echo satisfied dependencies
             else
@@ -57,10 +57,9 @@ else
                 then
                     sudo zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Tumbleweed/home:Dead_Mozay.repo
                     sudo zypper refresh
-                    sudo zypper install ZeroTierOne
-                    sudo zypper install curl git xterm python3 python3-tk
+                    sudo zypper install ZeroTierOne curl git xterm python3 python3-tk
                     echo satisfied dependencies
-                    PACMAN="yes"
+                    NOINSTALLONCURL="yes"
                 else
                     echo "do you want to continue without the satisfied dependencies?, y/n"
                     read nodep
@@ -78,7 +77,7 @@ else
     fi
 fi
 
-if [ $PACMAN = no ]
+if [ $NOINSTALLONCURL = no ]
 then
     xterm -e "curl -s https://install.zerotier.com | sudo bash"
 fi
