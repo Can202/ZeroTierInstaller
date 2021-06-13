@@ -103,7 +103,9 @@ echo ZeroTier-GUI by tralph3 cloned
 sudo cp ZeroTier-GUI/src/zerotier-gui /usr/bin/
 
 git clone https://github.com/Can202/ZeroTierInstaller
-cd ZeroTierInstaller/media/
+cd ZeroTierInstaller/
+#git checkout v0.7
+cd media/
 sudo cp zerotier-gui.png /opt/ZeroTierInstaller/
 sudo chmod a+x zerotier-exec
 sudo cp zerotier-exec /opt/ZeroTierInstaller/
