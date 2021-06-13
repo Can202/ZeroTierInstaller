@@ -126,14 +126,14 @@ echo Ready!!!
 echo
 echo
 echo
-echo you can run ZeroTier with this command:
+echo you can run ZeroTier
 echo
 echo
-echo sudo zerotier-gui
+echo Search it in your apps menu
 echo
 echo
 
-echo and in your apps
+echo
 
 echo now you can close this window
 read nothing
