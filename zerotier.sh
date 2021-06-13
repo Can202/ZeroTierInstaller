@@ -51,7 +51,7 @@ else
                 sudo pacman -Sy curl git python tk xterm zerotier-one
                 echo satisfied dependencies
             else
-                echo "Do you use Distros based on OpenSUSE (zypper), y/n"
+                echo "Do you use OpenSUSE Tumbleweed (Tumbleweed repo, zypper), y/n"
                 read zypper
                 if [ $zypper = y ]
                 then
@@ -61,12 +61,36 @@ else
                     echo satisfied dependencies
                     NOINSTALLONCURL="yes"
                 else
-                    echo "do you want to continue without the satisfied dependencies?, y/n"
-                    read nodep
-                    if [ $nodep = n ]
+                    echo "Do you use OpenSUSE Leap 15.3 (Leap 15.3, zypper), y/n"
+                    read zypper
+                    if [ $zypper = y ]
                     then
-                        echo ABORT
-                        exit
+                        sudo zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Leap_15.3/home:Dead_Mozay.repo
+                        sudo zypper refresh
+                        sudo zypper install ZeroTierOne curl git xterm python3 python3-tk
+                        echo satisfied dependencies
+                        NOINSTALLONCURL="yes"
+                    else
+                        echo "Are you an OpenSUSE user and you don't use Leap 15.3 or Tumbleweed?, y/n"
+                        read zypper
+                        if [ $zypper = y ]
+                        then
+                            echo "you have to install ZeroTier in this page"
+                            echo "https://software.opensuse.org/package/ZeroTierOne"
+                            echo "if you installed ZeroTierOne, press enter to continue"
+                            read nothing
+                            sudo zypper install curl git xterm python3 python3-tk
+                            echo satisfied dependencies
+                            NOINSTALLONCURL="yes"
+                        else
+                            echo "do you want to continue without the satisfied dependencies?, y/n"
+                            read nodep
+                            if [ $nodep = n ]
+                            then
+                                echo ABORT
+                                exit
+                            fi
+                        fi
                     fi
                 fi
             fi
