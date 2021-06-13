@@ -55,8 +55,12 @@ else
                 read zypper
                 if [ $zypper = y ]
                 then
+                    sudo zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Tumbleweed/home:Dead_Mozay.repo
+                    sudo zypper refresh
+                    sudo zypper install ZeroTierOne
                     sudo zypper install curl git xterm python3 python3-tk
                     echo satisfied dependencies
+                    PACMAN="yes"
                 else
                     echo "do you want to continue without the satisfied dependencies?, y/n"
                     read nodep
