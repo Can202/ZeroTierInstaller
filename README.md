@@ -7,7 +7,7 @@ works on Debian-based (apt), Arch-based (pacman), Fedora-like(dnf) and OpenSUSE 
 
 Tutorial:
 
-1st: Download [this](https://github.com/Can202/ZeroTierInstaller/releases/download/v0.7/zerotier.sh)
+1st: Download [this](https://github.com/Can202/ZeroTierInstaller/releases/download/v0.8/zerotier.sh)
 
 2nd: Activate it as executable
 
