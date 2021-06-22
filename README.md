@@ -2,7 +2,7 @@
 
 A installer to ZeroTier on Linux, with graphic interface (thanks to [tralph3](https://github.com/tralph3/ZeroTier-GUI))
 
-works on Debian-based (apt), Arch-based (pacman), Fedora-like(dnf) and OpenSUSE (zypper)
+works on Debian-based (apt), Manjaro (pacman, AUR), Fedora-like(dnf) and OpenSUSE (zypper)
 
 
 Tutorial:
