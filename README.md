@@ -19,7 +19,7 @@ works on Debian-based (apt), Manjaro (pacman, AUR), Fedora-like(dnf) and OpenSUS
 ## Option 2
 use this command with root or an admin user
 ~~~
-cd /tmp/ && touch zerotier.sh.remove && rm zerotier.sh* && wget https://github.com/Can202/ZeroTierInstaller/releases/download/v0.8/zerotier.sh && chmod a+x zerotier.sh* && ./zerotier.sh* && rm zerotier.sh*
+cd /tmp/ && touch zerotier.sh.remove && rm zerotier.sh* && wget https://github.com/Can202/ZeroTierInstaller/releases/download/v0.8/zerotier.sh && chmod a+x zerotier.sh* && clear && ./zerotier.sh* && rm zerotier.sh*
 ~~~
 
 
