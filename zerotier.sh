@@ -27,6 +27,11 @@ else
     fi
 fi
 
+echo "you can install just GUI (if you have zerotier-one from snap)"
+echo "Do you want to install zerotier-one? y/n"
+read install
+
+
 echo "Do you use Distros based on Debian, Ubuntu, Linux Mint, etc. (apt), y/n"
 read deb
 if [ $deb = y ]
@@ -48,16 +53,26 @@ else
             if [ $pacman = y ]
             then
                 NOINSTALLONCURL="yes"
-                sudo pacman -Sy curl git python tk xterm zerotier-one
+                
+                if [ $install = y ]
+                then
+                    sudo pacman -Sy zerotier-one
+                fi
+                
+                sudo pacman -Sy curl git python tk xterm
                 echo satisfied dependencies
             else
                 echo "Do you use OpenSUSE Tumbleweed (Tumbleweed repo, zypper), y/n"
                 read zypper
                 if [ $zypper = y ]
                 then
-                    sudo zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Tumbleweed/home:Dead_Mozay.repo
-                    sudo zypper refresh
-                    sudo zypper install ZeroTierOne curl git xterm python3 python3-tk
+                    if [ $install = y ]
+                    then
+                        sudo zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Tumbleweed/home:Dead_Mozay.repo
+                        sudo zypper refresh
+                        sudo zypper install ZeroTierOne
+                    fi
+                    sudo zypper install curl git xterm python3 python3-tk
                     echo satisfied dependencies
                     NOINSTALLONCURL="yes"
                 else
@@ -65,9 +80,13 @@ else
                     read zypper
                     if [ $zypper = y ]
                     then
-                        sudo zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Leap_15.3/home:Dead_Mozay.repo
-                        sudo zypper refresh
-                        sudo zypper install ZeroTierOne curl git xterm python3 python3-tk
+                        if [ $install = y ]
+                        then
+                            sudo zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Leap_15.3/home:Dead_Mozay.repo
+                            sudo zypper refresh
+                            sudo zypper install ZeroTierOne
+                        fi
+                        sudo zypper install curl git xterm python3 python3-tk
                         echo satisfied dependencies
                         NOINSTALLONCURL="yes"
                     else
@@ -101,9 +120,12 @@ else
     fi
 fi
 
-if [ $NOINSTALLONCURL = no ]
+if [ $install = y ]
 then
-    xterm -e "curl -s https://install.zerotier.com | sudo bash"
+    if [ $NOINSTALLONCURL = no ]
+    then
+        xterm -e "curl -s https://install.zerotier.com | sudo bash"
+    fi
 fi
 
 echo ZeroTier installed
