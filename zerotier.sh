@@ -161,7 +161,6 @@ echo
 echo
 
 echo now you can close this window
-read nothing
 exit
 
 
