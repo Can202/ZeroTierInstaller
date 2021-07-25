@@ -21,3 +21,4 @@ if you dependencies is not satisfied, install them manually
 - python3 (or just python on some distros)
 - python3-tk (other names: python3-tkinter, tk)
 - xterm
+- sudo
