@@ -7,7 +7,7 @@ works on Debian-based (apt), Manjaro (pacman, AUR), Fedora-like(dnf) and OpenSUS
 ## Tutorial
 use this command with root or an admin user
 ~~~
-cd /tmp/ && rm -vrf zerotier.sh && curl -LO https://github.com/Can202/ZeroTierInstaller/releases/download/v0.9/zerotier.sh && chmod a+x zerotier.sh && clear && ./zerotier.sh* && rm zerotier.sh*
+cd /tmp/ && rm -vrf zerotier.sh && curl -LO https://raw.githubusercontent.com/Can202/ZeroTierInstaller/dev/zerotier.sh && chmod a+x zerotier.sh && clear && sudo ./zerotier.sh* && rm zerotier.sh*
 ~~~
 
 ## Dependencies (before the script)
