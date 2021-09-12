@@ -120,7 +120,7 @@ cp ZeroTier-GUI/src/zerotier-gui /usr/bin/
 
 git clone https://github.com/Can202/ZeroTierInstaller
 cd ZeroTierInstaller/
-git checkout v0.9
+git checkout dev
 cd media/
 cp zerotier-gui.png /opt/ZeroTierInstaller/
 chmod a+x zerotier-exec
