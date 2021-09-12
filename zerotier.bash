@@ -49,6 +49,55 @@ else
     fi
 fi
 
+if [ -f "/usr/bin/xterm" ] || [ -f "/usr/sbin/xterm" ] || [ -f "/usr/games/xterm" ]
+then
+	echo xterm installed
+else
+	echo xterm is not installed
+	echo aborting
+	exit
+fi
+if [ -f "/usr/bin/curl" ] || [ -f "/usr/sbin/curl" ] || [ -f "/usr/games/curl" ]
+then
+	echo curl installed
+else
+	echo curl is not installed
+	echo aborting
+	exit
+fi
+if [ -f "/usr/bin/git" ] || [ -f "/usr/sbin/git" ] || [ -f "/usr/games/git" ]
+then
+	echo git installed
+else
+	echo git is not installed
+	echo aborting
+	exit
+fi
+if [ -f "/usr/bin/python3" ] || [ -f "/usr/sbin/python3" ] || [ -f "/usr/games/python3" ]
+then
+	echo python3 installed
+else
+	echo python3 is not installed
+	echo aborting
+	exit
+fi
+
+echo "
+try:
+    import tkinter
+except ImportError:
+    print('not')" > /tmp/test.py
+
+if [[ $(python3 /tmp/test.py) = "not" ]]
+then
+	rm -rf /tmp/test.py
+	echo tkinter is not installed
+	exit
+else
+	rm -rf /tmp/test.py
+	echo tkinter installed
+fi
+
 
               #      echo "Do you use OpenSUSE Leap 15.3 (Leap 15.3, zypper), y/n"
              #       read zypper
