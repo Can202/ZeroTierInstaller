@@ -13,34 +13,6 @@ then
     clear
     exit
 fi
-if [ -f "/usr/bin/sudo" ] || [ -f "/usr/sbin/sudo" ] || [ -f "/usr/games/sudo" ]
-then
-    echo sudo
-fi
-echo "do you use sudo command?(y/n)"
-read sucommand
-if [ $sucommand = n ]
-then
-    echo "I need your username to add to the sudo group, if you are agree put your password"
-    echo
-    su -c "sudo adduser $USER sudo"
-    echo added to the sudo group
-    echo
-    echo
-    echo "restart the PC, and then say you use the sudo command"
-    echo
-    echo
-    read nothing
-    exit
-else
-    if [ $sucommand = y ]
-    then 
-        echo OK
-    else
-        echo ERROR
-        exit
-    fi
-fi
 
 echo "you can install just GUI (if you have zerotier-one from snap)"
 echo "Do you want to install zerotier-one? y/n"
