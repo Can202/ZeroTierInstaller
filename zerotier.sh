@@ -1,6 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
-NOINSTALLONCURL="no"
 
 
 if [ ! $(whoami) = "root" ]
