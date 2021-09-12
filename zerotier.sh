@@ -1,7 +1,4 @@
 #!/bin/bash
-
-
-
 if [ ! $(whoami) = "root" ]
 then
     if [ -f "/usr/bin/dialog" ] || [ -f "/usr/sbin/dialog" ] || [ -f "/usr/games/dialog" ]
@@ -14,9 +11,6 @@ then
     exit
 fi
 
-echo "you can install just GUI (if you have zerotier-one from snap)"
-echo "Do you want to install zerotier-one? y/n"
-read install
 
 
 if [ -f "/usr/bin/apt" ] || [ -f "/usr/sbin/apt" ] || [ -f "/usr/games/apt" ]
