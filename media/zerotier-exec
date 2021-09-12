@@ -1,13 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
-if [ $1 = "-su" ]
-then
-    sudo zerotier-one &
-    zerotier-gui
-    echo xD
-    exit
-    
-fi
-
-sudo zerotier-one &
-sudo zerotier-gui
+zerotier-one &
+zerotier-gui
