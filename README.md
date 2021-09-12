@@ -6,8 +6,13 @@ works on Debian-based (apt), Manjaro (pacman, AUR), Fedora-like(dnf) and OpenSUS
 
 ## Tutorial
 use this command with root or an admin user
+### sudo
 ~~~
-cd /tmp/ && rm -vrf zerotier.sh && curl -LO https://raw.githubusercontent.com/Can202/ZeroTierInstaller/dev/zerotier.sh && chmod a+x zerotier.sh && clear && sudo ./zerotier.sh* && rm zerotier.sh*
+cd /tmp/ && rm -vrf zerotier.bash && curl -LO https://raw.githubusercontent.com/Can202/ZeroTierInstaller/dev/zerotier.bash && chmod a+x zerotier.bash && clear && sudo ./zerotier.bash && rm -vrf zerotier.bash
+~~~
+### su
+~~~
+cd /tmp/ && rm -vrf zerotier.bash && curl -LO https://raw.githubusercontent.com/Can202/ZeroTierInstaller/dev/zerotier.bash && chmod a+x zerotier.bash && clear && su root -c './zerotier.bash' && rm -vrf zerotier.bash
 ~~~
 
 ## Dependencies (before the script)
