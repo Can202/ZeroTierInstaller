@@ -8,11 +8,11 @@ works on Debian-based (apt), Manjaro (pacman, AUR), Fedora-like(dnf) and OpenSUS
 use this command with root or an admin user
 ### sudo
 ~~~
-cd /tmp/ && rm -vrf zerotier.bash && curl -LO https://raw.githubusercontent.com/Can202/ZeroTierInstaller/dev/zerotier.bash && chmod a+x zerotier.bash && clear && sudo ./zerotier.bash && rm -vrf zerotier.bash
+cd /tmp/ && rm -vrf zerotier.bash && curl -LO https://raw.githubusercontent.com/Can202/ZeroTierInstaller/v1.0/zerotier.bash && chmod a+x zerotier.bash && clear && sudo ./zerotier.bash && rm -vrf zerotier.bash
 ~~~
 ### su
 ~~~
-cd /tmp/ && rm -vrf zerotier.bash && curl -LO https://raw.githubusercontent.com/Can202/ZeroTierInstaller/dev/zerotier.bash && chmod a+x zerotier.bash && clear && su root -c './zerotier.bash' && rm -vrf zerotier.bash
+cd /tmp/ && rm -vrf zerotier.bash && curl -LO https://raw.githubusercontent.com/Can202/ZeroTierInstaller/v1.0/zerotier.bash && chmod a+x zerotier.bash && clear && su root -c './zerotier.bash' && rm -vrf zerotier.bash
 ~~~
 
 ## Dependencies (before the script)
