@@ -17,13 +17,13 @@ if [ -f "/usr/bin/apt" ] || [ -f "/usr/sbin/apt" ] || [ -f "/usr/games/apt" ]
 then
     echo apt detected
     apt update
-    apt install curl git python3 python3-tk xterm
+    apt install curl git python3 python3-tk xterm dialog
     xterm -e "curl -s https://install.zerotier.com | sudo bash"
 else
     if [ -f "/usr/bin/dnf" ] || [ -f "/usr/sbin/dnf" ] || [ -f "/usr/games/dnf" ]
     then
         echo dnf detected
-        dnf install curl git python3 python3-tkinter xterm
+        dnf install curl git python3 python3-tkinter xterm dialog
         xterm -e "curl -s https://install.zerotier.com | sudo bash"
     else
         if [ -f "/usr/bin/pacman" ] || [ -f "/usr/sbin/pacman" ] || [ -f "/usr/games/pacman" ]
@@ -33,7 +33,7 @@ else
             read
             pacman -Syy
             pacman -S zerotier-one
-            pacman -S curl git python tk xterm
+            pacman -S curl git python tk xterm dialog
         else
             if [ -f "/usr/bin/zypper" ] || [ -f "/usr/sbin/zypper" ] || [ -f "/usr/games/zypper" ]
             then
@@ -43,7 +43,7 @@ else
                 zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Tumbleweed/home:Dead_Mozay.repo
                 zypper refresh
                 zypper install ZeroTierOne
-                zypper install curl git xterm python3 python3-tk
+                zypper install curl git xterm python3 python3-tk dialog
             fi
         fi
     fi
