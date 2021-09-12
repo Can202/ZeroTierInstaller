@@ -6,4 +6,3 @@ Icon=/opt/ZeroTierInstaller/zerotier-gui.png
 Name=ZeroTier GUI
 Terminal=true
 Type=Application
-Version=1.2.2
