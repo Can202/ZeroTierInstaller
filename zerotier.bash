@@ -88,6 +88,8 @@ git clone https://github.com/Can202/ZeroTierInstaller
 cd ZeroTierInstaller/
 git checkout dev
 cd media/
+chmod a+x zerotier-gui-remove
+cp zerotier-gui-remove /usr/bin/zerotier-gui-remove
 cp zerotier-gui.png /opt/ZeroTierInstaller/
 chmod a+x zerotier-exec
 cp zerotier-exec /opt/ZeroTierInstaller/

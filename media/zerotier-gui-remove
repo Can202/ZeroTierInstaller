@@ -1,0 +1,18 @@
+#!/bin/bash
+if [ ! $(whoami) = "root" ]
+then
+    if [ -f "/usr/bin/dialog" ] || [ -f "/usr/sbin/dialog" ] || [ -f "/usr/games/dialog" ]
+    then
+        dialog --title "root" --msgbox "You need run this script as root" 0 0
+    else
+        echo "You need run this script as root"
+    fi
+    clear
+    exit
+fi 
+
+
+rm -vrf /usr/share/applications/zerotier-gui*
+rm -vrf /opt/ZeroTierInstaller/
+rm -vrf /usr/bin/zerotier-gui
+rm -vrf /usr/bin/zerotier-gui-remove
